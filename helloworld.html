@@ -1,116 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    
-</head>
+<html>
+<title>TimanPortfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url();
+  min-height: 100%;
+}
+</style>
 <body>
-    <header>
-        <h1>THIS IS MY PORTFOLIO </h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Im Kyle Lawrence Timan currently taking up Bachelor of Science in Information Technology! .</p>
-    </section>
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
 
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Kyle Lawrence Timan</b></h1>
+    <p>Fourth year Student.</p>
+    <img src="" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="/" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+  </header>
+
+  <!-- Portfolio Section -->
+
+
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About</h2>
+    <hr class="w3-opacity">
+    <p>A motivated and detail-oriented student pursuing Bachelor of Science in Information Technology at Saint louis Anne Colleges. 
+            Eager to apply academic knowledge to real-world challenges in software development and technology. . 
+            Possess strong communication and organizational skills developed through coursework and extracurricular activities.
+            Proven ability to learn quickly, work collaboratively in teams, and contribute effectively to projects. 
+            Seeking an opportunity to gain practical experience and contribute to the success of a dynamic organization.</p>
+           </p>
+    <h3 class="w3-padding-16">My Skills</h3>
+   <p>As a dedicated student pursuing a degree in IT at Saint Louis Anne , 
+                I have developed valuable skills through coursework and extracurricular activities. 
+                I am proficient in Microsoft Office Suite, including Word, Excel, and PowerPoint, which I have used extensively for academic projects and presentations. 
+                My strong analytical abilities enable me to approach problems logically and derive meaningful insights from data. 
+                I possess effective time management skills, ensuring that I meet deadlines and balance academic commitments effectively. Additionally, my collaborative nature allows me to work well in team settings, contributing ideas and supporting group efforts to achieve common goals.
+                 I am eager to apply these skills in a professional environment and further develop them through practical experience.</p>
     
-        <!-- Add more projects as needed -->
-    </section>
+   
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+  
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        header {
-            background-color: #097;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-        
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .project {
-            border: 1px solid #ccc;
-            margin: 1rem 0;
-            padding: 1rem;
-        }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        form label, form input, form textarea {
-            width: 100%;
-            max-width: 500px;
-            margin-bottom: 1rem;
-        }
-        
-        form button {
-            padding: 0.5rem 2rem;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>        
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Tunasan,Muntinlupa City</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone:0936021935</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:kylelawrencetimanmail.com</p>
+    </div>
     
+  
+    <p>Lets get in touch. Send me a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+<!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
 </body>
 </html>
